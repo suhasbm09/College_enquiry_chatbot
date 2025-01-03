@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+    <style>
+        body {
+        background-color: #1a1a1a;
+        }
+        @keyframes appear{
+        from{
+            opacity:0;
+            scale: 0;
+        }
+        to{
+            opacity:1;
+            scale:1;
+        }
+        }
+        .block1{
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+    </style>
+</head>
+
+
+<body class=" text-white text-opacity-70 font-sans ">
+
+<!--Navigation Bar-->
+    <nav class="bg-gray-900 w-full outline-0">
+    <div class="flex justify-around items-center p-4">
+        <!-- Logo And College name -->
+        <div class="flex ">
+        <a href="logo">
+            <img src="{{ url_for('static', filename='images/nielogo.png') }}" class="max-w-12 mr-4" alt="Logo">
+        </a>
+        <div class="flex flex-col ">
+            <a href="#" class="text-xl w-full font-bold hover:text-green-400 whitespace-nowrap">The National Institute of Engineering</a>
+            <a href="#" class="text-sm w-full font-bold hover:text-green-400 whitespace-nowrap">An Autonomous College under VTU</a>
+        </div>
+        <div>
+            <a href="#">
+            <img src="{{ url_for('static', filename='images/Year_img.png') }}" class="max-w-16  ml-4" alt="Logo">
+            </a>
+        </div>
+        </div>
+        <!-- sections and buttons -->
+        <div class="container mx-auto ">
+        <ul class="flex  space-x-12 py-4 justify-end mr-10">
+            <li class="text-white text-opacity-70 p-1 hover:text-yellow-300  cursor-pointer">Home</li>
+            <li class="text-white text-opacity-70 p-1 hover:text-yellow-300  cursor-pointer">Campus</li>
+            <li class="text-white text-opacity-70 p-1 hover:text-yellow-300  cursor-pointer">Academics</li>
+            <li class="text-white text-opacity-70 p-1 hover:text-yellow-300  cursor-pointer">Placements</li>
+            <li class="text-white text-opacity-70 p-1 hover:text-yellow-300  cursor-pointer">About Us</li>
+            <li class="text-white text-opacity-70 p-1 hover:text-yellow-300  cursor-pointer">Alumni</li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+    <main >
+        <div class="w-full overflow-x-auto scrollbar-none">
+            <div class="flex space-x-4">
+                <!-- Background Video Card 1 -->
+                <div class="relative flex-shrink-0 w-full p-3">
+                    <video 
+                        src="{{ url_for('static', filename='images/NIE_Video.mp4') }}" 
+                        autoplay 
+                        muted 
+                        loop 
+                        class="rounded-lg w-full h-full object-cover"
+                    ></video>
+                    <!-- Tagline -->
+                    <div class="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+                        <h2 class="text-gray-900 text-opacity-80 bg-white bg-opacity-40 hover:bg-opacity-100 text-center rounded-xl text-4xl italic font-serif font-extrabold p-4 animate-bounce">
+                            "Where Curiosity Meets Creation, and Engineers Build the Future"
+                        </h2>
+                    </div>
+                </div>
+        
+                <!-- South Campus Card 2 -->
+                <div class="relative flex-shrink-0 w-full bg-contain bg-center rounded-lg shadow-lg p-4">
+                    <img 
+                        src="{{ url_for('static', filename='images/NIE_South.jpg') }}" 
+                        alt="South Campus" height="770px"
+                        class="rounded-lg w-full h-full object-cover"
+                    >
+                    <!-- Text and Admission -->
+                    <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col items-center justify-center">
+                        <h3 class="text-red-800 text-opacity-80 bg-white rounded-xl bg-opacity-40 underline text-5xl italic font-bold p-4 mb-4 hover:text-yellow-400 hover:bg-opacity-100 cursor-pointer">
+                            South Campus
+                        </h3>
+                        <h3 class="text-blue-900 text-opacity-80 bg-white rounded-xl bg-opacity-60 text-4xl italic font-serif font-extrabold p-4 mb-2 hover:bg-opacity-100 cursor-pointer">
+                            Powering Progress – Core Engineering Admissions Open!
+                        </h3>
+                        <h3 class="text-blue-900 bg-slate-300 rounded-lg bg-opacity-50 text-sm italic font-serif font-normal p-4 mb-2 hover:font-extrabold hover:bg-opacity-100 cursor-pointer">
+                            CET CODE: E022 | E056 || COMEDK CODE: E142
+                        </h3>
+                        <!-- Apply Button -->
+                        <button class="bg-slate-600 bg-opacity-55 rounded-md text-white hover:bg-white hover:bg-opacity-45 p-3 hover:text-yellow-400 cursor-pointer animate-bounce">
+                            Click Here
+                        </button>
+                    </div>
+                </div>
+        
+                <!-- North Campus Card 3 -->
+                <div class="relative flex-shrink-0 w-full bg-contain bg-center rounded-lg shadow-lg p-4">
+                    <img 
+                        src="{{ url_for('static', filename='images/NIE_North.jpg') }}" 
+                        alt="North Campus" 
+                        class="rounded-lg w-full h-full object-cover"
+                    >
+                    <!-- Text and Admission -->
+                    <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col items-center justify-center">
+                        <h3 class="text-red-800 text-opacity-80 bg-white rounded-xl bg-opacity-40 underline text-5xl italic font-bold p-4 mb-4 hover:text-yellow-400 hover:bg-opacity-100 cursor-pointer">
+                            North Campus
+                        </h3>
+                        <h3 class="text-blue-900 text-opacity-80 bg-white rounded-xl bg-opacity-60 text-4xl italic font-serif font-extrabold p-4 mb-2 hover:bg-opacity-100 cursor-pointer">
+                            Shape the Digital Future – IT Admissions Open!
+                        </h3>
+                        <h3 class="text-blue-900 bg-slate-300 rounded-lg bg-opacity-50 text-sm italic font-serif font-normal p-4 mb-2 hover:font-extrabold hover:bg-opacity-100 cursor-pointer">
+                            CET CODE: E178 || COMEDK CODE: E085
+                        </h3>
+                        <!-- Apply Button -->
+                        <button class="bg-slate-600 bg-opacity-55 animate-bounce rounded-md text-white hover:bg-white hover:bg-opacity-45 p-3 hover:text-yellow-400 cursor-pointer">
+                            Click Here
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- Notice Board -->
+        <div class="block1">
+            <!-- Heading -->
+            <h3 class="text-center text-5xl text-yellow-300  mb-6 mt-3 ">Notice Board</h3>
+            <!-- Notice Board Content block -->
+            <div class="relative w-6/12 ml-80 h-64 bg-slate-900 bg-opacity-50 mb-6 overflow-hidden ">
+                <!-- Notice Board Content  and Marquee-->
+                <ul id="notice-list" class="absolute text-center w-full text-white text-opacity-70 text-xl space-y-4  top-0 animate-marquee">
+                    <li><a href="#" class="hover:text-yellow-300 text-blue-600 underline" onclick="stopAnimation()">Latest Placements News</a></li>
+                    <li><a href="#" class="hover:text-yellow-300 text-blue-600 underline" onclick="stopAnimation()">Lab Exam Schedule</a></li>
+                    <li><a href="#" class="hover:text-yellow-300 text-blue-600 underline" onclick="stopAnimation()">Minor Project Phase 2</a></li>
+                    <li><a href="#" class="hover:text-yellow-300 text-blue-600 underline" onclick="stopAnimation()">Latest about CSE FEST 2024</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End -->
+        <hr>
+
+        <!-- campus details -->
+        <div class="mb-16 block1">
+            <!-- Heading -->
+            <h2 class="text-5xl mb-5 mt-5 text-center text-yellow-300">Our Campus</h2><hr>
+            <!-- Campus Details -->
+            <div class="grid grid-flow-col justify-center mt-12">
+                <!-- Campus Images -->
+                <div>
+                    <a href="https://nie.ac.in/north-campus-home/" target="_blank"><img src="{{ url_for('static', filename='images/north_campus_img.jpg') }}" alt="Image 1 " class="hover:scale-105 cursor-pointer max-w-md rounded-lg shadow-lg mr-20"/></a>
+                    <h2 class="text-center font-bold mt-4 mb-4 text-green-500 cursor-pointer hover:text-yellow-300">North Campus</h2>
+                </div>
+                <div>
+                    <a href="https://nie.ac.in/south-campus-home/" target="_blank"><img src="{{ url_for('static', filename='images/south_campus_img.jpg') }}" alt="Image 2" class="hover:scale-105 cursor-pointer max-w-md rounded-lg mt-3 shadow-lg"/></a>
+                    <h2 class="text-center font-bold mt-4 mb-4 text-green-500 cursor-pointer hover:text-yellow-300">South Campus</h2>
+                </div>
+            </div>
+            <!-- End -->
+        </div>
+        <hr>
+
+        <!-- About us details -->
+        <div class="block1">
+            <h2 class="text-center text-5xl mb-6 mt-2 text-yellow-300">About Us</h2>
+            <p class="text-center m-10 text-lg">The National Institute of Engineering (NIE), established in 1946, is a prestigious grant-in-aid institution ranked in the 151–200 band among India’s top engineering colleges by NIRF 2023 and 17th by The Week. Managed by a society with nine out of ten directors being alumni, NIE is autonomous under Visvesvaraya Technological University (VTU) and approved by AICTE. Accredited by NAAC, we offer 7 UG and 10 PG programs, with most courses accredited under NBA Tier-I. NIE operates from two campuses in Mysuru and hosts 15 Centres of Excellence for research and consultancy in collaboration with industries and alumni. Recognized under MHRD-World Bank TEQIP across three phases, it also functions as a research center under VTU and AICTE. The institute fosters holistic student development with strong academics, robust faculty, quality housing, vibrant campus life, and excellent sports and cultural opportunities.</p>
+        </div>
+        <hr>
+        <!-- End -->
+
+        <!-- Principal Message -->
+        <div class="flex flex-col items-center justify-center text-white text-opacity-70 py-10 mb-6 px-4 space-y-8 block1">
+            <!-- Principal Message Heading -->
+            <h3 class="text-yellow-300 text-center text-5xl block1">Principal's Message</h3>      
+            <!-- Principal Message -->
+            <div class="flex flex-row items-center bg-gray-900 p-6 rounded-lg shadow-lg space-y-6 lg:space-y-0 lg:space-x-6 w-full max-w-4xl">
+                <!-- Image Section and Message -->
+                <div class="flex-shrink-0">
+                    <img src="{{ url_for('static', filename='images/principal.jpg') }}" alt="Principal" class="w-48 h-48 rounded-full border-4 border-green-500 shadow-lg object-cover" />
+                </div>
+                <div class="text-left space-y-4">
+                    <p class="italic font-serif text-lg  leading-relaxed">The National Institute of Engineering (NIE) has been at the forefront of technical education in Karnataka, through the continuous implementation of Outcome Based Education (OBE), ensuring that our graduates are able to face up to the challenges demanded by the engineering profession.</p>
+                    <p class="font-semibold text-yellow-300 text-xl">- Dr. Rohini Nagapadma</p>
+                </div>
+            </div>
+        <!-- End -->
+        </div>
+        <hr>
+
+        <!-- Course Offered -->
+        <div class="mt-2 px-6 py-10 text-white text-opacity-70 rounded-lg space-y-8 block1">
+            <!-- Heading -->
+            <h2 class="text-5xl text-center text-yellow-300  ">Explore Courses</h2>
+            <!-- Courses Section -->
+            <div class="flex flex-row  space-x-12  space-y-0">
+                <!-- UG Courses -->
+                <div class="bg-gray-900 p-6 rounded-lg shadow-md w-full lg:w-1/2">
+                    <h3 class="text-3xl text-yellow-300 font-semibold mb-4">Undergraduate Courses</h3>
+                    <ul class="list-disc list-inside space-y-2  text-lg leading-relaxed">
+                        <li class="hover:text-yellow-300 cursor-pointer">Computer Science Engineering</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">Information Science and Engineering</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">Artificial Intelligence and Machine Learning</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">Electronics and Communication Engineering</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">Electrical and Electronics Engineering</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">Civil Engineering</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">Mechanical Engineering</li>
+                    </ul>
+                </div>
+                <!-- PG Courses -->
+                <div class="bg-gray-900 p-6 rounded-lg shadow-md w-full lg:w-1/2">
+                    <h3 class="text-3xl text-yellow-300 font-semibold mb-4">Postgraduate Courses</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg leading-relaxed">
+                        <li class="hover:text-yellow-300 cursor-pointer">M.tech in Computer Applications</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">M.Tech in Hydraulics</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">M.tech in Structural Engineering</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">M.tech in Information Technology</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">M.tech in Computer Networking and Engineering</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">M.tech in Networking and Internet Engineering</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">M.tech in Industrail Automation and Robotics</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">M.tech in Power Systems</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">M.tech in Machine Design</li>
+                        <li class="hover:text-yellow-300 cursor-pointer">M.tech in Production Engineering System Technology</li>
+                    </ul>
+                </div>
+            </div>
+        <!-- End -->
+        </div>
+    
+
+        <!-- Admissions -->
+        <div class="flex justify-center p-6 text-center" >
+            <a href="https://nie.ac.in/admission/" target="_blank"><div class="animate-bounce">
+                <h4 class="text-red-600 bg-yellow-400 p-4 rounded-md text-xl cursor-pointer hover:text-yellow-400 hover:bg-red-600">Start Your Journey Now!</h4>
+            </div></a>
+        </div>
+        <hr>
+        <!-- End -->
+
+        <!-- Placements Details -->
+        <h2 class="text-5xl text-center mt-4 text-yellow-300 mb-6 block1">Our Recruiters</h2>
+        <div class="overflow-x-auto mb-8 bg-white bg-opacity-10 scrollbar-none block1">
+            <div class="flex gap-4">
+                <img src="{{ url_for('static', filename='images/Placement.png') }}" alt="Recruiter Sheet 1" class="w-full h-full object-contain object-center">
+                <img src="{{ url_for('static', filename='images/placemnt-2.png') }}" alt="Recruiter Sheet 2" class="w-full h-full object-contain object-center">
+                <img src="{{ url_for('static', filename='images/Placement-3.png') }}" alt="Recruiter Sheet 3" class="w-full h-full object-contain object-center">
+            </div>
+        </div>
+        <hr>
+            
+    
+
+        <!-- Address and map details -->
+        <h2 class="text-center text-2xl p-4 text-yellow-400 mb-4 block1">Visit Soon</h2>
+        <div class="flex justify-center p-5 block1"  >
+            <!-- South campus -->
+            <div class="border p-3 mr-20">
+                <h3 class="text-center mb-4 text-yellow-300 text-lg">NIE, South Campus</h3>
+                <a target="_blank" href="https://www.google.co.in/maps/place/The+National+Institute+of+Engineering+South+Campus+(NIE+South)/@12.2838184,76.6388999,17z/data=!3m1!4b1!4m6!3m5!1s0x3baf65561e102919:0xf947b18cc5ad3d88!8m2!3d12.2838184!4d76.6414748!16zL20vMDRqdG5k?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
+                <img  src="{{ url_for('static', filename='images/image2.png') }}"  height="500px" width="500px"></a>
+                <h5 class=" text-yellow-300 mt-4 text-sm">Mananthavadi Rd, Vidyaranyapura, Mysuru, Karnataka 570008</h5>
+            </div>
+            <!-- North Campus -->
+            <div class="border p-3 ">
+                <h3 class="text-center mb-4 text-yellow-300 text-lg">NIE, North Campus</h3>
+                <a target="_blank" href="https://www.google.co.in/maps/place/The+National+Institute+Of+Engineering+North+Campus+(NIE+North+)/@12.371201,76.5823355,17z/data=!3m1!4b1!4m6!3m5!1s0x3baf7bdade337df9:0x23a85e1a4a664e0c!8m2!3d12.371201!4d76.5849104!16s%2Fg%2F1tfb503j?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
+                <img  src="{{ url_for('static', filename='images/image.png') }}" height="500px" width="500px"></a>
+                <h5 class="mt-4 text-yellow-300 text-sm text-wrap">No 50, Koorgalli Village, Hootagalli Industrial Area, Mysuru, Karnataka 570018</h5>
+            </div>
+        <!-- End-->
+        </div>
+
+        <!-- Chatbot popup -->
+        <div class="bg-gradient-to-r from-purple-800 to-blue-800  animate-pulse fixed bottom-16 right-8 px-6 py-4 rounded-lg cursor-pointer hover:bg-blue-400 justify-center text-center flex" onclick="chatbot()">
+            <img src="{{ url_for('static', filename='images/nielogo.png') }}" height="25px" width="35px" class="mr-2"/>
+            <h2 class="font-semibold p-1 text-yellow-600 text-lg  hover:text-green-600 ">UniVerse</h2>
+        </div>
+    </main>
+    
+    <!-- Footer details -->
+    <footer >
+        <div class=" text-white text-opacity-70 border-t py-8 ">
+            <!-- Quick Links, Contact Us, Social media Links -->
+            <div class="container mx-auto px-6 flex flex-row justify-between items-center">
+                <!-- Quick Links -->
+                <div class="mb-6 lg:mb-0">
+                    <h3 class="text-xl font-semibold text-yellow-300 mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-yellow-300 ">Academics</a></li>
+                        <li><a href="#" class="hover:text-yellow-300 ">Campus Life</a></li>
+                        <li><a href="#" class="hover:text-yellow-300 ">Fees</a></li>
+                        <li><a href="#" class="hover:text-yellow-300 ">Placements</a></li>
+                        <li><a href="#" class="hover:text-yellow-300 ">About Us</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Us -->
+                <div >
+                    <h3 class="text-xl font-semibold text-yellow-300 mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-yellow-300 ">info@uniVerse.com</a></li>
+                        <li><a href="#" class="hover:text-yellow-300 ">By: SUHAS B M | SUHAS B H | Nischith S | Rohan P N</a></li>
+                        <li><a href="#" class="hover:text-yellow-300 ">NIE,Mysuru</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media Links -->
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/niemysuru/" target="_blank" ><img src="{{ url_for('static', filename='images/instagramlogo.png') }}" style="width: 75px;height: 75px;"/></a>
+                    <a href="https://www.linkedin.com/school/nie-mysuru/" target="_blank" ><img src="{{ url_for('static', filename='images/linkedinlogo.png') }}"style="width: 75px;height: 75px;"/></a>
+                    <a href="https://www.facebook.com/NIEMYSURU/" target="_blank" ><img src="{{ url_for('static', filename='images/facebooklogo.png') }}"style="width: 75px;height: 75px;"/></a>
+                </div>
+            </div>
+            <!-- Bottom Section -->
+            <div class="mt-8 text-center border-t border-black bg-opacity-90 text-white text-opacity-70 pt-4">
+                <h5>&copy; 2024 NIE. All Rights Reserved.</h5>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+    //Notice Board Animation Stop
+    function stopAnimation() {
+        const noticeList = document.getElementById('notice-list');
+        noticeList.classList.remove('animate-marquee');
+        noticeList.classList.add('animate-paused');
+    }
+
+    //chatbot interface
+    function chatbot(){
+            window.open("./index");
+    }
+    </script>
+</body>
+</html>
